@@ -54,7 +54,7 @@ def greet():
         SR.speak(random.choice(result)[0])
     conn.commit()
     conn.close()
-    SR.speak("\nMyself lili. How may I help you?")
+    SR.speak("\nhello,i am lili,i am your personal assistant,How may I help you?")
 
 def mainframe():
     """Logic for execution task based on query"""
@@ -292,9 +292,12 @@ def mainframe():
                 SR.speak("It's " + cmove)
 
             #time and date
-            elif there_exists(['the time'],query):
-                strTime =datetime.datetime.now().strftime("%H:%M:%S")
-                SR.speak(f"Sir, the time is {strTime}")
+            elif 'time' in query:
+                time = datetime.datetime.now().strftime('%I:%M %p')
+                SR.speak('Sir, the current time is ' + time)
+            # elif there_exists(['the time','what time is it now','what'],query):
+            #     strTime =datetime.datetime.now().strftime("%H:%M:%S")
+            #     SR.speak(f"Sir, the time is {strTime}")
             elif there_exists(['the date'],query):
                 strDay=datetime.date.today().strftime("%B %d, %Y")
                 SR.speak(f"Today is {strDay}")
