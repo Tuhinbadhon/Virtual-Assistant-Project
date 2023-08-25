@@ -1,4 +1,4 @@
-# Heisenberg
+# Virtual assistant
 Voice Assistant in python 
 
 #### Packages needs to install

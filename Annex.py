@@ -378,10 +378,10 @@ class WhatsApp:
 class Weather:
     def show(self,scrollable_text):
         SR=SpeakRecog(scrollable_text)
-        base_url = "http://api.openweathermap.org/data/2.5/weather?q=Pune,IN&units=metric&appid=ea45752424c9cad83b4f5c836ced6b1a"
+        base_url = "http://api.openweathermap.org/data/2.5/weather?q=dhaka,IN&units=metric&appid=ea45752424c9cad83b4f5c836ced6b1a"
         data=requests.get(base_url).json()
         SR.scrollable_text_clearing()
-        SR.speak("-----------------------------Weather Report of PUNE City------------------------------")
+        SR.speak("-----------------------------Weather Report of dhaka City------------------------------")
         SR.updating_ST("Temperature:   "+str(int(data['main']['temp']))+' Celsius\n'+
                         "Wind Speed:    "+str(data['wind']['speed'])+' m/s\n'+
                         "Latitude:      "+str(data['coord']['lat'])+
