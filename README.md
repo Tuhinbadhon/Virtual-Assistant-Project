@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Virtual assistant
+=======
+# Virtual Assistant
+>>>>>>> 0870510ccd4f77ce50a4905d3af0cd17939c05be
 Voice Assistant in python 
 
 #### Packages needs to install
